@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Em yêu chị</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+
+        body{
+            background: #0b1522;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .heart{
+            cursor: pointer;
+            margin: auto;
+            width: 68px;
+            height: 68px;
+            background: #f20044;
+            position: relative;
+            transform: rotate(-45deg);
+            box-shadow: -10px 10px 90px #f20044;
+            animation: heart 0.8s linear infinite;
+        }
+
+        .heart::before{
+            content: "";
+            position: absolute;
+            width: 68px;
+            height: 68px;
+            background: #f20044;
+            top: -50%;
+            border-radius: 50px;
+            box-shadow: -10px -10px 90px #f20044;
+        }
+
+        .heart::after{
+            content: "";
+            position: absolute;
+            width: 68px;
+            height: 68px;
+            background: #f20044;
+            right: -50%;
+            border-radius: 50px;
+            box-shadow: 10px 10px 90px #f20044;
+        }
+
+        #message{
+            color: aliceblue;
+            position: absolute;
+            margin-top: 45vh;
+            width: 100vw;
+            text-align: center;
+        }
+
+        @keyframes heart{
+            0%{
+                transform: rotate(-45deg) scale(1.08);
+            }
+            80%{
+                transform: rotate(-45deg) scale(1);
+            }
+            100%{
+                transform: rotate(-45deg) scale(0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+    <span id="message">Em muốn được ở bên chị, muốn được nói yêu chị mỗi ngày, được nhìn thấy chị cười mỗi phút. <br/>🥰❤️ Woa ai ni ❤️🥰</span>
+</body>
+</html>
