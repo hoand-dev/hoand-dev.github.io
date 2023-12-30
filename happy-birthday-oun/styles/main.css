@@ -299,6 +299,10 @@ body {
     font-size: 1.5rem;
     font-weight: lighter;
   }
+
+  #imagePath{
+    width: 100%;
+  }
 }
 
 #confetti {
